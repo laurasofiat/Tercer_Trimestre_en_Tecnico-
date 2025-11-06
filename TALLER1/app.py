@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 DB_CONFIG = {
     'host': 'localhost',
-    'database': 'diseño',
+    'database':'USUSARIOS',
     'user': 'postgres',
-    'password': 'S0lut3c2012*',
+    'password': '123456*',
     'port': 5432
 }
 
@@ -30,11 +30,14 @@ def crear_tabla():
     if conexion:
         cursor = conexion.cursor()
         cursor.execute("""
-        CREATE TABLE IF NOT EXISTS contactos (
-            id SERIAL PRIMARY KEY,
-            nombre VARCHAR(100) NOT NULL,
-            correo VARCHAR(100) NOT NULL,
-            mensaje TEXT,
+        CREATE TABLE IF NOT EXISTS USUSARIOS (
+            id_ususarios SERIAL PRIMARY KEY,
+            Nombre VARCHAR(100) NOT NULL,
+            Apellido VARCHAR(100) NOT NULL,
+            Correo VARCHAR(100) NOT NULL,
+            Telefono VARCHAR(20),NOT FULL,
+            Direccion TEXT,NOT FULL,
+            Mensaje TEXT,
             creado TIMESTAMP DEFAULT NOW()
         );
         """)
