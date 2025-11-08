@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro</title>
     <link rel="stylesheet" href="estilo.css">
+    <h1>Formulario</h1>
+    <h3>Diviértete respondiendo</h3>
 </head>
 <body>
     <div class="container">
-        <h1>Formulario</h1>
-        <p>Completa el registro.</p>
-        <h2>Formulario de Contacto</h2>
+        <h2>Completa el registro.</h2>
         <div id="alerta" class="message"></div>
 
         <form id="contactForm">
-            <label for="id">*</label>
+            <label for="id_usuarios">Identificación</label>
+            <input type="text" id="id_usuarios" name="id_usuarios" required>
+
+            <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
             
-            <label for="correo">Correo *</label>
-            <input type="email" id="correo" name="correo" required>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
             
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" name="telefono" required>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
+            <label for="correo">Correo Electrónico</label>
+            <input type="correo" id="correo" name="correo" requered>
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje"></textarea>
@@ -41,46 +38,5 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                correo: document.getElementById('correo').value,
-                mensaje: document.getElementById('mensaje').value
-            };
-            
-            try {
-                const response = await fetch('/contacto', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                const mensajeDiv = document.getElementById('alerta');
-                
-                if (response.ok) {
-                    mensajeDiv.className = 'message success';
-                    mensajeDiv.textContent = '' + result.mensaje;
-                    mensajeDiv.style.display = 'block';
-                    document.getElementById('contactForm').reset();
-                } else {
-                    mensajeDiv.className = 'message error';
-                    mensajeDiv.textContent = '❌ ' + result.error;
-                    mensajeDiv.style.display = 'block';
-                }
-                
-                setTimeout(() => { mensajeDiv.style.display = 'none'; }, 5000);
-            } catch (error) {
-                const mensajeDiv = document.getElementById('mensaje');
-                mensajeDiv.className = 'message error';
-                mensajeDiv.textContent = ' Error de conexión';
-                mensajeDiv.style.display = 'block';
-            }
-        });
-    </script>
 </body>
 </html>

@@ -1,1 +1,0 @@
-# Tercer_Trimestre_en_Tecnico-

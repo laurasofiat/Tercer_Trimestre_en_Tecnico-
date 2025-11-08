@@ -1,21 +1,54 @@
+h1{
+text-align: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 15px;
+border-radius: 20px;
+color: rgb(0, 0, 0);
+}
+h3{
+text-align: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 15px;
+border-radius: 10px;
+color:rgb(214, 214, 214);
+}
+p{
+text-align: center;
+color:cornsilk;
+font-family:Arial, sans-serif;
+}
+h2{
+color: rgb(209, 203, 195);
+text-align: left;
+}
+p{position:left;}
 body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 { color: #333; margin-bottom: 10px; }
-        h2 { color: #555; margin: 20px 0 15px; }
-        p { color: #666; line-height: 1.6; margin-bottom: 10px; }
-        label { display: block; margin-bottom: 5px; color: #555; font-weight: bold; }
-        input, textarea {
+box-sizing: border-box;
+font-family: "Lucida Sans";
+font-size: 21px;
+background-image: url("fondo.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+table-layout: center;
+}
+form {
+background: rgba(145, 145, 145, 0.6);
+padding: 20px;
+border-radius: 10px;
+color: white;
+max-width: 600px;
+margin: auto;
+}
+.container{
+    background-position:left;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px ;
+}
+input, textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -27,19 +60,10 @@ body {
         button {
             width: 100%;
             padding: 12px;
-            background: #007bff;
+            background: #000000;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
         }
-        button:hover { background: #0056b3; }
-        .message {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            display: none;
-        }
-        .success { background: #d4edda; color: #155724; }
-        .error { background: #f8d7da; color: #721c24; }
