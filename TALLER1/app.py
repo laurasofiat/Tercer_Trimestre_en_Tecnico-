@@ -3,15 +3,20 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 import os
 from datetime import datetime
+from dotenv import load_dotenv
+import os
+
+# Cargar variables desde el archivo .env
+load_dotenv()
 
 # Configuración de la aplicación
 app = Flask(__name__)
 
 DB_CONFIG = {
-    'host': 'localhost',
-    'database':'USUSARIOS',
+    'host':'localhost',
+    'database':'diseño',
     'user': 'postgres',
-    'password': '123456*',
+    'password': '123456',
     'port': 5432
 }
 
@@ -31,13 +36,13 @@ def crear_tabla():
         cursor = conexion.cursor()
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS USUSARIOS (
-            id_ususarios SERIAL PRIMARY KEY,
-            Nombre VARCHAR(100) NOT NULL,
-            Apellido VARCHAR(100) NOT NULL,
-            Correo VARCHAR(100) NOT NULL,
-            Telefono VARCHAR(20),NOT FULL,
-            Direccion TEXT,NOT FULL,
-            Mensaje TEXT,
+            id_usuarios SERIAL PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            apellido VARCHAR(100) NOT NULL,
+            correo VARCHAR(100) NOT NULL,
+            telefono VARCHAR(100) NOT FULL,
+            direccion VARCHAR(100) NOT FULL,
+            mensaje VARCHAR(100),
             creado TIMESTAMP DEFAULT NOW()
         );
         """)

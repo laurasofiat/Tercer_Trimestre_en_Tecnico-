@@ -14,26 +14,27 @@
         <div id="alerta" class="message"></div>
 
         <form id="contactForm">
-            <label for="id_usuarios">Identificación</label>
-            <input type="text" id="id_usuarios" name="id_usuarios" required>
+            <label for="id_usuarios">Número de Identificación</label>
+            <input type="integer" id="id_usuarios" name="id_usuarios" required>
 
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="varchar" id="nombre" name="nombre" required>
             
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" required>
+            <input type="varchar" id="apellido" name="apellido" required>
             
             <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="direccion" required>
+            <input type="varchar" id="direccion" name="direccion" required>
 
             <label for="telefono">Teléfono</label>
-            <input id="telefono" name="telefono" name="telefono" required>
+            <input type="varchar" name="telefono" name="telefono" required>
 
             <label for="correo">Correo Electrónico</label>
-            <input type="correo" id="correo" name="correo" requered>
+            <input type="varchar" id="correo" name="correo" requered>
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
+            <textarea type="varchar" id="mensaje" name="mensaje"></textarea>
+            
             
             <button type="submit">Enviar</button>
         </form>
