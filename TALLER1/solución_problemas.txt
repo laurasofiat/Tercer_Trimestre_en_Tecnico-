@@ -1,0 +1,2 @@
+Problema:
+Error al subir la base de datos, recarga la página, sin embargo no se agregan datos cuando esta 

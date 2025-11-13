@@ -1,0 +1,22 @@
+CREATE TABLE formulario (
+  id_usuarios SERIAL PRIMARY KEY,
+  nombre VARCHAR(50),
+  apellido VARCHAR(50),
+  direccion TEXT,
+  telefono VARCHAR(20),
+  correo_electronico VARCHAR(100),
+  mensaje TEXT
+);
+
+INSERT INTO formulario (nombre, apellido, direccion, telefono, correo_electronico, mensaje)
+VALUES ('Ejemplo', 'Prueba', 'Calle Falsa 123', '555-123', 'correo@ejemplo.com', 'Mensaje de prueba');
+
+
+
+
+
+
+
+
+
+
